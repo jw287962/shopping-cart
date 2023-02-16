@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+  padding: 100px;
 }
 
 #root{
@@ -41,4 +43,19 @@ gap: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+
+.footer{
+  display: flex;
+  height: 25px;
+  background-color: grey;
+}
+
+
+.flex{
+  display: flex;
+}
+.col{
+  flex-direction: column;
 }

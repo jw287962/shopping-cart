@@ -5,6 +5,10 @@ nav{
   align-items: center;
   color: white;
   background-color: rgb(40, 47, 49);
+  position: fixed;
+  width: 100vw;
+  margin-bottom: 10vh;
+  z-index: 100;
 }
 
 a{
