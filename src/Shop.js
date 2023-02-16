@@ -1,9 +1,10 @@
-
+import { Cart } from "./Cart"
 
 export const Shop = () => {
   return (
-    <div>
+    <div className="body">
        <h1>Shopping Cart</h1>
+       <Cart></Cart>
     
     </div>
     

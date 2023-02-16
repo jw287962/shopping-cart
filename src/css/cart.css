@@ -1,0 +1,14 @@
+
+.body{
+  position: inherit;
+  height: 1000px;
+}
+.cart{
+  position: absolute;
+  top: 0px;
+  right: 30px;
+}
+
+.cart>div{
+  position: sticky;
+}
