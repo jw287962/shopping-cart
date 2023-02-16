@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.38586feb.css",
-    "main.js": "/react-gh-pages/static/js/main.71692c67.js",
-    "static/js/787.d6fe38e8.chunk.js": "/react-gh-pages/static/js/787.d6fe38e8.chunk.js",
-    "static/media/model Y.jpeg": "/react-gh-pages/static/media/model Y.ba0778cf0f2b11532359.jpeg",
-    "static/media/model 3.png": "/react-gh-pages/static/media/model 3.cc4b98127f1640f00980.png",
-    "static/media/model X.png": "/react-gh-pages/static/media/model X.78e66637f3b9d88a1fb8.png",
-    "static/media/roadster.jpg": "/react-gh-pages/static/media/roadster.95be91c83b78a47f402e.jpg",
-    "static/media/model S.jpeg": "/react-gh-pages/static/media/model S.c6ffb152e6c527026036.jpeg",
-    "index.html": "/react-gh-pages/index.html",
-    "main.38586feb.css.map": "/react-gh-pages/static/css/main.38586feb.css.map",
-    "main.71692c67.js.map": "/react-gh-pages/static/js/main.71692c67.js.map",
-    "787.d6fe38e8.chunk.js.map": "/react-gh-pages/static/js/787.d6fe38e8.chunk.js.map"
+    "main.css": "/shopping-cart/static/css/main.38586feb.css",
+    "main.js": "/shopping-cart/static/js/main.4a51f086.js",
+    "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
+    "static/media/model Y.jpeg": "/shopping-cart/static/media/model Y.ba0778cf0f2b11532359.jpeg",
+    "static/media/model 3.png": "/shopping-cart/static/media/model 3.cc4b98127f1640f00980.png",
+    "static/media/model X.png": "/shopping-cart/static/media/model X.78e66637f3b9d88a1fb8.png",
+    "static/media/roadster.jpg": "/shopping-cart/static/media/roadster.95be91c83b78a47f402e.jpg",
+    "static/media/model S.jpeg": "/shopping-cart/static/media/model S.c6ffb152e6c527026036.jpeg",
+    "index.html": "/shopping-cart/index.html",
+    "main.38586feb.css.map": "/shopping-cart/static/css/main.38586feb.css.map",
+    "main.4a51f086.js.map": "/shopping-cart/static/js/main.4a51f086.js.map",
+    "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.38586feb.css",
-    "static/js/main.71692c67.js"
+    "static/js/main.4a51f086.js"
   ]
 }
