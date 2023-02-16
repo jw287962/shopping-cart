@@ -11,7 +11,7 @@ const Product = (props) => {
     
   return (
     <div>
-        <div role="item">{item.name}</div>
+        <div role="item">{item.name}  ${item.price}</div>
     </div>
   )
 }

@@ -11,6 +11,7 @@
 
 .itemImage{
     width:  300px;
+    height: 180px;
     object-fit:cover;
 }
 
@@ -20,6 +21,8 @@ grid-template-columns: 1fr 1fr;
 gap: 20px;
 }
 
+.listing{
+}
 
 
 .listing>div>input{

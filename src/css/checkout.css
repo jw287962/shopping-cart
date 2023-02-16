@@ -1,0 +1,10 @@
+
+
+.cartCheckout{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  border: 1px solid black;
+  margin: 2px;
+align-items: center;
+}

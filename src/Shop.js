@@ -14,7 +14,6 @@ function importAll(img){
     object.push({imageName,imageFile});
     i++;
   });
-  console.log(object);
   return object;
 }
 
@@ -24,12 +23,10 @@ function importAll(img){
   const allProducts = [];
 
   for(let i =0;i <allPictures.length;i++){
-  const item =  {name: allPictures[i].imageName, picture: allPictures[i].imageFile,count:0};
+  const item =  {name: allPictures[i].imageName, picture: allPictures[i].imageFile,count:0, price: (20000*i)+20000};
     allProducts.push(item);
   }
 
-  console.log(allPictures);
-  console.log(allProducts)
 const [products,setProducts] = useState(allProducts);
 const [itemCounter,setItemCounter] = useState(0);
 
@@ -67,13 +64,13 @@ return
                 let num = i-1;
                 if(element == undefined || products[num] == undefined) return null;
                 return(
-                <div key={`${element.name}i`} a-key={num} className="listing">
+                <div key={`${element.name}i`} a-key={num} className ="listing">
                     <div>
-                      <Product item={element}></Product>
+                      <Product item={element} ></Product>
                       <label htmlFor="product" >                    </label>
                       <input role="input" type='number' value={products[num].count} id='product'  onChange={updateInput} max="10"></input>
                     </div>
-                  <img src={allPictures[num].imageFile} className='itemImage'></img>
+                  <img src={allPictures[num].imageFile} className='itemImage' alt={element.name}></img>
                 </div>
                 )
                })}

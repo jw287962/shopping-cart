@@ -12,17 +12,17 @@ describe('product displays on dom', () => {
     render(<Product item={car}></Product>);
     const itemName = screen.getByRole("item");
 
-    expect(itemName.textContent).toBe('');
+    expect(itemName.textContent).toContain('$');
 
     
   })
 
   it('props.item should set to the item', () => {
-    const car = {name:"car"}
+    const car = {name:"carz"}
     render(<Product item={car}></Product>);
     const itemName = screen.getByRole("item");
 
-    expect(itemName.textContent).toBe('car');
+    expect(itemName.textContent).toContain('carz');
 
     
   })
