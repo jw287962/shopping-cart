@@ -20,7 +20,7 @@ import { Link } from 'react-router-dom';
   return (
       <div className="cart">
             <div >Cart:{cartItems}</div>
-            <Link to={{pathname:"/shop/checkout" }} state={{ allProducts: allProducts}}><button >Checkout</button></Link>
+            {/* <Link to={{pathname:"/shop/checkout" }} state={{ allProducts: allProducts}}><button >Checkout</button></Link> */}
       </div>
   )
 }

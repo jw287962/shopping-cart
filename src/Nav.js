@@ -8,7 +8,14 @@ export const Nav = () => {
     const [allProducts,setAllProducts] = useState([]);
 
     useEffect(()=>{
+      console.log('nav useeffect')
       if( state && allProducts !== state.allProducts ){
+        setAllProducts(state.allProducts);
+      }
+      console.log(state);
+      if(!allProducts && state){
+        console.log('nav is true');
+        console.log(state.allProducts);
         setAllProducts(state.allProducts);
       }
     // console.log(data)
@@ -20,9 +27,10 @@ export const Nav = () => {
         <div>WebsiteName</div>
       <div>
         <Link to="/"  state={{ allProducts: allProducts}}>Home</Link>
-        <Link to="./Shop"  state={{ allProducts: allProducts}}>Shop</Link>
-
-        <Link to="/shop/Checkout"  state={{ allProducts: allProducts}}>Checkout</Link>
+        <Link to={{pathname:"/shop" }}  state={{ allProducts: allProducts}}>Shop</Link>
+        
+        <Link to={{pathname:"/shop/checkout" }} state={{ allProducts: allProducts}}>Checkout</Link>
+        {/* <Link to="/shop/Checkout"  state={{ allProducts: allProducts}}>Checkout</Link> */}
 
       </div>
 

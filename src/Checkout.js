@@ -1,19 +1,23 @@
 
 import React, {useState,useEffect} from "react";
 import'./css/checkout.css'
-import { useParams,useLocation} from "react-router-dom";
+import { useParams,useLocation, useNavigate} from "react-router-dom";
 
 const Checkout = (props) => {
   // const location = useLocation();
   // const { data } = location.state;
+
+  const navigate = useNavigate();
+
   let { state } = useLocation();
   const [allProducts,setProducts]  = useState([]);
 
   useEffect(()=>{
     console.log('use effect Checkout')
-    if( allProducts !== state.allProducts){
+    if(state && state.allProducts && allProducts !== state.allProducts){
       setProducts(state.allProducts);
     }
+   
   // console.log(data)
 
   })
@@ -27,27 +31,40 @@ const Checkout = (props) => {
     setProducts(allProducts.concat([]));
   }
 
-
+const processingPayment = () => {
+  setProducts([]);
+  window.scrollTo(0, 0);
+  navigate({to:'./'},{state: {allProducts: []}})
+}
   return (
     <div className="body"> <h2>CHECKOUT</h2>
         {allProducts.map( (ele,i)=> {
           i++;
           let num = i-1;
-          if(ele == undefined) return (   <div> TOTAL : {  allProducts.reduce((prev,curr) => prev + (curr.price*curr.count),0)} </div>)
-          if(ele.count == 0) return;
+          if(ele === undefined) return (   <div> TOTAL : {  allProducts.reduce((prev,curr) => prev + (curr.price*curr.count),0)} </div>)
+          if(ele.count === 0) return;
           return(
             <div className="cartCheckout" key={ele.name}> 
                 <h3>{ele.name}</h3> <div className="checkoutCount"><button onClick={subtractItem} id={num}>-</button>  {ele.count} <button onClick={subtractItem} id={num}>+</button></div><div> ${ele.price}</div> 
-                <img src={ele.picture} className="checkoutImg"></img>
+                <img src={ele.picture} className="checkoutImg" alt={ele.name}></img>
                 <div className="itemTotals"> Item Total: ${(ele.count * ele.price).toLocaleString() } </div>
             </div>
           )
         })
         }
           <h2> TOTAL : ${  allProducts.reduce((prev,curr) => prev + (curr.price*curr.count),0).toLocaleString()} </h2>
-          <button className="pay">PAY</button>
+          <button className="pay" onClick={processingPayment}>PAY</button>
     </div>
   )
 }
 
 export default Checkout;
+
+// TESTING
+// could test that correct item is updated on button click  if more than one item
+// could test that item total is correct
+// could test total is correct
+// could test button updates item correctly for both + and - 
+//could test buttons don't go negative or if it does, remove item or stay at 0
+// could test when click pay, all products are removed (maybe also a confirmation page with correct payment details)
+
