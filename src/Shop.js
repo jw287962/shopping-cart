@@ -1,7 +1,7 @@
 import  Cart  from "./Cart"
 import Product from "./Product"
 import React, {useState,useEffect} from "react";
-
+import {useLocation} from "react-router-dom";
 
 function importAll(img){
   let object = [];
@@ -18,6 +18,7 @@ function importAll(img){
 }
 
 
+// 
  const Shop = () => {
   const allPictures = importAll(require.context('./images',false,/\.(png|jpe?g|svg|gif)$/));
   const allProducts = [];
@@ -30,7 +31,12 @@ function importAll(img){
 const [products,setProducts] = useState(allProducts);
 const [itemCounter,setItemCounter] = useState(0);
 
+
+let { state } = useLocation();
     useEffect(() => {
+      if( state.allProducts.length !==0 && allProducts !== state.allProducts ){
+        setProducts(state.allProducts);
+      }
     });
 
 
