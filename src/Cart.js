@@ -1,9 +1,15 @@
 import './css/cart.css'
+import React, {useState,useEffect} from 'react';
 
-export const Cart = () => {
+ const Cart = () => {
+
+  const [cartItem, setCartItem] = useState(0);
+
   return (
       <div className="cart">
-            <div>Cart data:</div>
+            <div>Cart:{cartItem}</div>
+            <button>Checkout</button>
       </div>
   )
 }
+export default Cart;
