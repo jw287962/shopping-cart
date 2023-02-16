@@ -1,13 +1,18 @@
 import './css/cart.css'
 import React, {useState,useEffect} from 'react';
 
- const Cart = () => {
+ const Cart = (props) => {
 
-  const [cartItem, setCartItem] = useState(0);
+  const [cartItems, setCartItems] = useState(0);
+  useEffect(()=> {
+    if(cartItems != props.counter){
+      setCartItems(props.counter);
+    }
+  })
 
   return (
       <div className="cart">
-            <div>Cart:{cartItem}</div>
+            <div>Cart:{cartItems}</div>
             <button>Checkout</button>
       </div>
   )

@@ -4,7 +4,7 @@ const Product = (props) => {
     const [item,setItem] = useState({name: ''});
  
   useEffect(() => {
-    if(props.item){
+    if(props.item !== item){
       setItem(props.item);
     }
   });
@@ -12,7 +12,6 @@ const Product = (props) => {
   return (
     <div>
         <div role="item">{item.name}</div>
-       
     </div>
   )
 }
