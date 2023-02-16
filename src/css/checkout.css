@@ -37,7 +37,7 @@ h2{
 }
 .itemTotals{
 position: relative;
-left:200px;
+left:180px;
   grid-column: 1/3;
   justify-content: left;
   font-weight: 800;
