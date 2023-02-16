@@ -14,8 +14,9 @@ width: 400px;
 border-radius: 10px;
 min-height: 165px;
 
-
 }
+
+
 h2{
   margin: 10px;
 }
@@ -30,7 +31,10 @@ h2{
 .cartCheckout>div{
   font-weight: 800;
 }
-
+.checkoutCount>button{
+  font-size: large;
+  font-weight: 800;
+}
 .itemTotals{
 position: relative;
 left:200px;
