@@ -48,7 +48,6 @@ let { state } = useLocation();
       if(e.target.value < 0){
 return
       }
-        console.log(e.target.value);
       const arrayNum = e.target.parentElement.parentElement.getAttribute('a-key');
       const objectHolder = products[arrayNum];
       objectHolder.count  = e.target.value;

@@ -13,7 +13,6 @@ const Checkout = (props) => {
   const [allProducts,setProducts]  = useState([]);
 
   useEffect(()=>{
-    console.log('use effect Checkout')
     if(state && state.allProducts && allProducts !== state.allProducts){
       setProducts(state.allProducts);
     }
