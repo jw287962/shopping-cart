@@ -6,16 +6,18 @@ import userEvent from "@testing-library/user-event";
 import Shop from "../Shop";
 
 
-// describe('counter value needs to update ', () => {
+describe('counter value needs to update ', () => {
 
 
-//   it('props.item should set to the item', () => {
-//     const item =  {name: `car`, count:0};
-//     render(<Shop ></Shop>);
-//     const itemName = screen.getByRole("input");
+  it('item count update should work', () => {
+    // const item =  {name: allPictures[i].imageName, picture: allPictures[i].imageFile,count:0};
+    // const car = {name:""}
+    // render(<Product item={car}></Product>);
+    // const itemName = screen.getByRole("item");
 
+    // expect(itemName.textContent).toBe('');
 
     
-//   })
+  })
 
-// });
+});

@@ -7,3 +7,35 @@
 #root{
   position: relative;
 }
+
+
+.itemImage{
+    width:  300px;
+    object-fit:cover;
+}
+
+.allProducts{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+}
+
+
+
+.listing>div>input{
+  border: none;
+  padding: 3px;
+  padding-left: 5px;
+  margin: 3px;
+  background-color: rgb(228, 226, 226);
+  border-radius: 20px;
+  text-align: center;
+  width: 50px;
+  font-size: 20px;
+  font-weight:800;
+}
+.listing>div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
